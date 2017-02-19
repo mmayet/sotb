@@ -3,6 +3,7 @@ var delayMillis;
 $(document).ready(function() {
     $('.slider').slider({ indicators: false, interval: 2000 });
     firetoasts();
+    /*starttabs();*/
 });
 
 var thousandPoemAudio = document.getElementById('thousandPoemAudio');
@@ -33,3 +34,12 @@ displaytoasts = function(toastCounter) {
         Materialize.toast(toasts[toastCounter], 5500, 'rounded');
     }, delayMillis * (toastCounter + 1));
 }
+
+/*starttabs = function() {
+	$('#home').trigger('click');
+	$('#dear').trigger('click');
+	$('#info').trigger('click');
+	$('#youreloved').trigger('click');
+	$('#1000lines').trigger('click');
+	$('#honesty').trigger('click');
+}*/
