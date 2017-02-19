@@ -15,20 +15,20 @@ thetale.addEventListener('play', function(e) {
 firetoasts = function() {
 	delayMillis = 1000;
 	var toasts = [
-		"<span>As-salām ʿAlaykum!</span>",
-		"<span>Welcome, O Servant of The Beloved ﷺ.</span>",
-		"<span>I’m just a little helper.</span>",
-		"<span>I’ll tell you if anything new is added to the website.</span>",
-		"<span>I’ll also tell you if there’s an event coming up.<br/>And there is! Less than 2 months away.</span>",
-		"<span>Btw, I work great on small phones too.</span>",
-		"<span></span>",
-		"<span></span>",
-		"<span></span>",
-		"<span></span>"];
+		/*0*/"Salām, O Servant of The Beloved ﷺ!",
+		/*1*/"I’m here to help and give updates.",
+		/*2*/"Add me to your phone's homescreen.",
+		/*3*/"💚",
+		/*4*/"",
+		/*5*/"",
+		/*6*/"",
+		/*7*/""];
 	Materialize.toast(toasts[0], 4000, 'rounded');
 	setTimeout(function() {Materialize.toast(toasts[1], 4000, 'rounded');}, delayMillis);
 	setTimeout(function() {Materialize.toast(toasts[2], 4000, 'rounded');}, delayMillis*2);
 	setTimeout(function() {Materialize.toast(toasts[3], 4000, 'rounded');}, delayMillis*3);
-	setTimeout(function() {Materialize.toast(toasts[4], 4000, 'rounded');}, delayMillis*4);
-	setTimeout(function() {Materialize.toast(toasts[5], 4000, 'rounded');}, delayMillis*5);
+	/*setTimeout(function() {Materialize.toast(toasts[4], 4000, 'rounded');}, delayMillis*4);*/
+	/*setTimeout(function() {Materialize.toast(toasts[5], 4000, 'rounded');}, delayMillis*5);*/
+	/*setTimeout(function() {Materialize.toast(toasts[6], 4000, 'rounded');}, delayMillis*6);*/
+	/*setTimeout(function() {Materialize.toast(toasts[7], 4000, 'rounded');}, delayMillis*7);*/
 }
