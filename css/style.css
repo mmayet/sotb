@@ -156,3 +156,12 @@ h6 {
   }
 }
 
+.tab-card-title {
+    padding-top: 15px;
+}
+
+@media only screen and (max-width: 400px) {
+  .audiopoem {
+    width: 250px;
+  }
+}

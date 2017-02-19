@@ -32,6 +32,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <h2 class="header center green-text text-lighten-1 mytitle"><strong>Servants of The Beloved</strong></h2>
+                <h5 class="header center green-text text-lighten-1 mytitle"><em>Khuddām Al-Ḥabīb</em></h5>
             </div>
         </div>
     </div>
@@ -45,9 +46,9 @@
             <div class="card-panel grey lighten-3 slim-card">
                 <div class="nav-content ">
                     <ul class="tabs tabs-transparent grey lighten-3">
-                        <li class="tab"><a class="active" href="#home">Home</a></li>
-                        <li class="tab"><a href="#events">Events</a></li>
-                        <li class="tab"><a href="#love">Love</a></li>
+                        <li class="tab"><a class="active" href="#home" onclick="ga('send', 'event', 'Home', 'Click', 'Site');">Home</a></li>
+                        <li class="tab"><a href="#events" onclick="ga('send', 'event', 'Events', 'Click', 'Site');">Events</a></li>
+                        <li class="tab"><a href="#love" onclick="ga('send', 'event', 'Love', 'Click', 'Site');">Love</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,15 +56,22 @@
         <!-- HOME PAGE -->
         <div id="home">
             <div class="card-panel">
+                <div class="row hide-on-med-and-up center">
+                    <div class="col s12">
+                        <i class="material-icons small green-text icon-sep">favorite</i>
+                        <i class="material-icons small green-text icon-sep">people</i>
+                        <i class="material-icons small green-text icon-sep">favorite</i>
+                    </div>
+                </div>
                 <div class="row valign-wrapper">
-                    <div class="col s2 center">
+                    <div class="col m2 center hide-on-small-and-down">
                         <i class="material-icons small green-text card-icon-gap">favorite</i>
                         <br/>
                         <i class="material-icons small green-text card-icon-gap">people</i>
                         <br/>
                         <i class="material-icons small green-text">favorite</i>
                     </div>
-                    <div class="col s10">
+                    <div class="col s11 m10">
                         <div class="card-content">
                             <h4 class="grey-text text-darken-3">Who We Are</h4>
                             <p>We are simply those who yearn to be considered from the legendary few who were honored by having the status of serving [<em>khidmah</em>] The Messenger ﷺ. The likes of ʿAbdullāh ibn Masʿūd [rḍ], Anas ibn Mālik [rḍ], Rabīʿah ibn Kaʿb [rḍ], and Our Pure Honorable Mother, ʿĀʾishah [rḍ]. Their every waking moment was spent at the service of The Pride of Humanity ﷺ. Pleased by the simple acts of bringing their most beloved ﷺ his toothstick, wuḍūʾ water, or to even wait outside of his blessed door ﷺ awaiting to put his sandals on for him ﷺ; thus being graced by the most perfect feet ever created by God.
@@ -96,8 +104,8 @@
             <div class="card">
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class="active" href="#dear">My Dears, My Loves!</a></li>
-                        <li class="tab"><a href="#serving">Serving You, My Master</a></li>
+                        <li class="tab"><a class="active" href="#dear" onclick="ga('send', 'event', 'Dear', 'Click', 'Site');">My Dears, My Loves!</a></li>
+                        <li class="tab"><a href="#serving" onclick="ga('send', 'event', 'Serving', 'Click', 'Site');">Serving You, My Master</a></li>
                     </ul>
                 </div>
                 <div class="card-content green lighten-3 center grey-text text-darken-3">
@@ -118,7 +126,7 @@
                         <br/> You called me your Beloved, but little do you know
                         <br/>
                         <em>You are my beloved, always, and forever more</em>
-                        <div class="right-align">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
+                        <div class="right-align hide">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
                     </div>
                     <div id="serving">
                         I dream, My Love, to serve you in every way.
@@ -146,7 +154,7 @@
                         <br/> To see you. To hug you. To kiss you.
                         <br/>
                         <br/> Serving you for eternity in Paradise.
-                        <div class="right-align">— <em>Khādim Al-Ḥabīb</em></div>
+                        <div class="right-align hide">— <em>Khādim Al-Ḥabīb</em></div>
                     </div>
                 </div>
             </div>
@@ -160,11 +168,11 @@
                 </div>
             </div>
             <div class="card-panel">
-                <div class="row valign-wrapper">
-                    <div class="col s2 center">
+                <div class="row hide-on-med-and-up">
+                    <div class="col s12 center">
                         <i class="material-icons small circle green-text">event</i>
                     </div>
-                    <div class="col s10">
+                    <div class="col s12">
                         <div class="card-content">
                             <h6>
                                 <strong>Date:</strong> Saturday, April 15
@@ -182,6 +190,50 @@
                                 </h6>
                         </div>
                     </div>
+                    <div class="col s12 center">
+                        <i class="material-icons small circle green-text">help_outline</i>
+                    </div>
+                    <div class="col s12">
+                        <div class="card-content">
+                            <p>
+                                This is simply a day to learn about the events of <em>Al-Isrāʾ wa Al-Miʿrāj </em> [The Divine Escort and Ascension at Night]. A night wherein Our Beloved ﷺ was called by God The Perfect to The Holy Land [<em>Al-Quds</em>], and then up beyond The Heavens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hide-on-small-and-down valign-wrapper">
+                    <div class="col m1 center">
+                        <i class="material-icons small circle green-text valign">event</i>
+                    </div>
+                    <div class="col m5">
+                        <div class="card-content">
+                            <h6>
+                                <strong>Date:</strong> Saturday, April 15
+                                <br>
+                                <strong>Hijrī:</strong> Rajab 17/18th, 1438
+                                <br>
+                                <strong>Time:</strong> 4:00PM - 11:00PM
+                                <br>
+                                <strong>Where:</strong> UCI [Most Likely]
+                                <br>
+                                <!--<small>In Student Center, between Emerald Bay and Moss Cove.</small><br>-->
+                                <strong>Price:</strong> One <em>ṣalāh</em> on The Beloved ﷺ <span class="green-text">💚</span>
+                                <br>
+                                <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=bnIyY2JiaTBqbDUzcHY2YzBxNDBsODY4cG8gbWF5ZXRtOTNAbQ&amp;tmsrc=mayetm93%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
+                                </h6>
+                        </div>
+                    </div>
+                    <div class="col m1 center valign">
+                        <i class="material-icons small circle green-text">help_outline</i>
+                    </div>
+                    <div class="col m4">
+                        <div class="card-content">
+                            <p>
+                                This is simply a day to learn about the events of <em>Al-Isrāʾ wa Al-Miʿrāj </em> [The Divine Escort and Ascension at Night]. A night wherein Our Beloved ﷺ was called by God The Perfect to The Holy Land [<em>Al-Quds</em>], and then up beyond The Heavens.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col m1"></div>
                 </div>
             </div>
             <div class="card hide">
@@ -212,12 +264,19 @@
                 </div>
             </div>
             <div class="card">
+                <div class="card-content center">
+                    <span class="card-title green-text hide">Revelation</span>
+                    <h4 class="quran">سُبْحَانَ <small class="noshow">ا</small>الَّذِي <small class="noshow">ا</small>أَسْرَىٰ <small class="noshow">ا</small>بِعَبْدِهِ <small class="noshow">ا</small>لَيْلًا <small class="noshow">ا</small>مِّنَ <small class="noshow">ا</small>الْمَسْجِدِ <small class="noshow">ا</small>الْحَرَامِ <small class="noshow">ا</small>إِلَى <small class="noshow">ا</small>الْمَسْجِدِ <small class="noshow">ا</small>الْأَقْصَى <small class="noshow">ا</small>الَّذِي <small class="noshow">ا</small>بَارَكْنَا <small class="noshow">ا</small>حَوْلَهُ <small class="noshow">ا</small>لِنُرِيَهُ <small class="noshow">ا</small>مِنْ <small class="noshow">ا</small>ءايَاتِنَآ <small class="noshow">ا</small>ۚ <small class="noshow">ا</small>إِنَّهُ<small class="miniletter">و</small><small class="noshow">ا</small>هُوَ <small class="noshow">ا</small>السَّمِيعُ <small class="noshow">ا</small>الْبَصِيُر <small class="noshow">ا</small>﴿١﴾ <small class="noshow">ا</small></h4>
+                    <h6 class="">How Perfect is The One Who took His Slave by night from The Sacred Place of Worship [Makkah] to The Furthest Place of Worship [Jerusalem]— a place whose surroundings We have blessed—, so that We could show him Our Signs. He Alone is The All Hearing, The All Seeing. <small>[Qurʾān 17:1]</small></h6>
+                </div>
+            </div>
+            <div class="card">
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width grey lighten-3">
-                        <li class="tab"><a class="active" href="#info">Info</a></li>
-                        <li class="tab"><a href="#schedule">Schedule</a></li>
-                        <li class="tab"><a href="#rsvp">RSVP</a></li>
-                        <li class="tab"><a href="#disclaimer">Disclaimer</a></li>
+                        <li class="tab"><a class="active" href="#info" onclick="ga('send', 'event', 'Info', 'Click', 'Site');">Info</a></li>
+                        <li class="tab"><a href="#schedule" onclick="ga('send', 'event', 'Schedule', 'Click', 'Site');">Schedule</a></li>
+                        <li class="tab"><a href="#rsvp" onclick="ga('send', 'event', 'RSVP', 'Click', 'Site');">RSVP</a></li>
+                        <li class="tab"><a href="#disclaimer" onclick="ga('send', 'event', 'Disclaimer', 'Click', 'Site');">Disclaimer</a></li>
                     </ul>
                 </div>
                 <div class="card-content">
@@ -226,13 +285,13 @@
                             <div class="col s12 m6">
                                 <div class="icon-block">
                                     <h4 class="center green-text"><i class="material-icons">star</i></h4>
-                                    <h6 class="center">Special Invite</h6> You’re invited to attend a very joyous and blessed event titled: ‘<em>The Heavenly Invite</em>’. The central theme of the event revolves around mentioning Our Beloved Messenger ﷺ, beautifying his praises, and increasing our love for him ﷺ.
+                                    <h6 class="center">Special Invite</h6> You’re invited to attend a very joyous and blessed event titled: ‘<em>The Heavenly Invite</em>’. The central theme of the event revolves around mentioning Our Beloved Messenger ﷺ, beautifying his praises, and falling deeper in love with him ﷺ.
                                 </div>
                             </div>
                             <div class="col s12 m6">
                                 <div class="icon-block">
-                                    <h4 class="center green-text"><i class="material-icons">today</i></h4>
-                                    <h6 class="center">The Day</h6> This is simply a day to learn about the events of <em>Al-Isrāʾ wa Al-Miʿrāj </em> [The Divine Escort and Ascension at Night]. A night wherein Our Beloved ﷺ was called by God The Perfect to The Holy Land [Al-Quds], and then up beyond The Heavens.
+                                    <h4 class="center green-text"><i class="material-icons">restaurant</i></h4>
+                                    <h6 class="center">Fasting</h6> It is from the perfect teachings of Our Beloved Prophet ﷺ to regularly fast. And how beautiful is it to fast on days when we gather to to remember God ﷻ and His Beloved ﷺ. Aa simple <em>Ifṭār</em>, and a light dinner will be provided [it's okay if you don't fast].
                                 </div>
                             </div>
                         </div>
@@ -267,22 +326,22 @@
                                     <td>Setup</td>
                                 </tr>
                                 <tr>
-                                    <td>5:00PM - 5:30PM</td>
+                                    <td>5:00PM - 5:45PM</td>
                                     <td>Casual</td>
                                     <td>Arrival & Activity</td>
                                 </tr>
                                 <tr>
-                                    <td>5:30PM - 5:40PM</td>
+                                    <td>5:45PM - 6:00PM</td>
                                     <td>Prayer</td>
-                                    <td>ʿAṣr ~5:31PM</td>
+                                    <td>ʿAṣr</td>
                                 </tr>
                                 <tr>
-                                    <td>5:40PM - 6:00PM</td>
+                                    <td>6:00PM - 6:15PM</td>
                                     <td>Qaṣāʾid</td>
-                                    <td>TBD</td>
+                                    <td>I Shall Tell The Tale</td>
                                 </tr>
                                 <tr class="standout">
-                                    <td>6:00PM - 7:20PM</td>
+                                    <td>6:15PM - 7:20PM</td>
                                     <td>Session</td>
                                     <td>By Brother</td>
                                 </tr>
@@ -337,6 +396,120 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-title green-text center-align tab-card-title">Words of Praise</div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#ascend" onclick="ga('send', 'event', 'ascend', 'Click', 'Site');">You're Loved</a></li>
+                        <li class="tab"><a href="#soliloquy" onclick="ga('send', 'event', 'Soliloquy', 'Click', 'Site');">The Soliloquy</a></li>
+                    </ul>
+                </div>
+                <div class="card-content green lighten-3 center grey-text text-darken-3">
+                    <div id="ascend">
+                        [...] My Beloved, my Dear, your praise has no end,
+                        <br/> God loves you so much, that He made you ascend.
+                        <br/>
+                        <br/> Higher and closer, where none has been before,
+                        <br/> Closer than two bows, that’s how much you’re one to adore.
+                        <br/>
+                        <br/> You’re loved, you’re loved, yes He loves you so,
+                        <br/> He’s given you that which none else will ever know.
+                        <br/>
+                        <br/> No one will ever know just how special you are,
+                        <br/> In a universe of black you’re the most brightly shining star.
+                        <br/>
+                        <br/> All of humanity on one end and you on another,
+                        <br/> Your virtue outweighs them all; your likeness has no other. [...]
+                    </div>
+                    <div id="soliloquy">
+                        ...And then Jibrīl did halt and say,
+                        <br/> —'The Lote-Tree holds my hallowed niche,
+                        <br/> And, at its bound, my station ends;
+                        <br/> —The Lote-Tree is the farthest reach.
+                        <br/> I dare not pass the final veil
+                        <br/> —That yet remains; though I may yearn,
+                        <br/> For should I step into the Light,
+                        <br/> —Then, verily, my wings will burn!'
+                        <br/>
+                        <br/> Jibrīl did falter, all did fail.
+                        <br/> —The Prophet rose beyond the veil,
+                        <br/> To hear the scribing of the quills,
+                        <br/> —On tablets, God's eternal will.
+                        <br/> Enshrouding clouds around concealed,
+                        <br/> —As God Almighty was revealed.
+                        <br/>
+                        <br/> We stand silent; we say no more.
+                        <br/> —A secret lay beyond that door.
+                        <br/> And say we naught; if uttered aught,
+                        <br/> —Then none but speech that He was wrought.
+                        <br/> '
+                        <strong>No vision may encompass Him;<br/>
+                        —For vision He compasses.</strong>'...
+                        <div class="right-align">— <em><a class="white-text text-darken-2" href="http://www.nuralhabib.com/ProductDetails.aspx?dsf=94sXp0IDjn4=&d=1" target="_blank" onclick="ga('send', 'event', 'nuralhabib', 'Click', 'Site');">Noor Yusuf</a></em></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title green-text center-align tab-card-title">Songs of Love</div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a href="#sirahpoem" onclick="ga('send', 'event', 'SirahPoem', 'Click', 'Site');">One Thousand Lines</a></li>
+                        <li class="tab"><a href="#thetale" onclick="ga('send', 'event', 'The Tale', 'Click', 'Site');">The Tale</a></li>
+                    </ul>
+                </div>
+                <div class="card-content green lighten-3 center grey-text text-darken-3">
+                    <div id="sirahpoem">
+                        <audio controls class="audiopoem" id="thousandPoemAudio">
+                            <source src="media/audio/The Heavenly Invite.mp3" type="audio/mpeg">
+                        </audio>
+                        <br/>
+                        <br/> “
+                        <strong>It is I that will make you pleased,</strong>” said God,
+                        <br/> At this it was, that he was now called.
+                        <br/>
+                        <br/> An invite so great, like never before,
+                        <br/> Lead all the Prophets, you’re the best for sure.
+                        <br/>
+                        <br/> Then he went, into the Heaven of low,
+                        <br/> And there was Adam, to all of us, old.
+                        <br/>
+                        <br/> To the second Heaven, up he now went,
+                        <br/> With Jesus and John, to whom he now met.
+                        <br/>
+                        <br/> Further up he went, now at level three,
+                        <br/> Seeing Joesph, with half of <em>his</em> beauty.
+                        <br/>
+                        <br/> Up and up, now at the level of four,
+                        <br/> Up to Idrīs, from whom ink was first poured.
+                        <br/>
+                        <br/> Up to level five, is where he now reached,
+                        <br/> Aaron he met, who had nice and clear speech.
+                        <br/>
+                        <br/> At six, our Prophet, is ever so high,
+                        <br/> Where he met Moses, a man with God, nigh.
+                        <br/>
+                        <br/> At seven our Prophet, far above land,
+                        <br/> Ibrahim said, “Send your people Salām!”
+                        <br/>
+                        <br/> More so than that, he was called past the Heav’ns,
+                        <br/> He stood so high, far beyond The Seven.
+                        <br/>
+                        <br/> A rank so high, even the Angel— shy,
+                        <br/> The best of signs, he did see with his eye.
+                        <br/>
+                        <br/> And here it was, when prayer was revealed,
+                        <br/> His rank with God, was no longer concealed.
+                        <br/>
+                        <br/> Face-to-face like two bows brought together,
+                        <br/> The Beloved of God, he is forever.
+                    </div>
+                    <div id="thetale">
+                        <audio controls class="audiopoem" id="thetale">
+                            <source src="media/audio/specialMiraj.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- END EVENT PAGE -->
         <!-- START LOVE PAGE -->
@@ -350,19 +523,19 @@
                 <div class="card-content center">
                     <span class="card-title green-text">Revelation</span>
                     <h4 class="quran">قُلْ <small class="noshow">ا</small>إِن كُنتُمْ <small class="noshow">ا</small>تُحِبُّونَ <small class="noshow">ا</small>اللَّهَ <small class="noshow">ا</small>فَاتَّبِعُونِى <small class="noshow">ا</small>يُحْبِبْكُمُ <small class="noshow">ا</small>اللَّهُ <small class="noshow">ا</small>وَيَغْفِرْ <small class="noshow">ا</small>لَكُمْ <small class="noshow">ا</small>ذُنُوبَكُمْ <small class="noshow">ا</small>ۗ <small class="noshow">ا</small>وَاللَّهُ <small class="noshow">ا</small>غَفُورٌ <small class="noshow">ا</small>رَّحِيمٌ  <small class="noshow">ا</small>﴿٣١﴾ <small class="noshow">ا</small></h4>
-                    <h6 class="">Tell them [My Beloved Prophet ﷺ]: 'If you truly claim to love God, then follow me [The Prophet ﷺ]! God will then love you, and forgive your wrong actions. God is Ever Forgiving, Eternally Merciful.’ [3:31]</h6>
+                    <h6 class="">Tell them [My Beloved Prophet ﷺ]: 'If you truly claim to love God, then follow me [The Prophet ﷺ]! God will then love you, and forgive your wrong actions. God is Ever Forgiving, Eternally Merciful.’ <small>[Qurʾān 3:31]</small></h6>
                     <i class="material-icons small green-text icon-sep">favorite</i>
                     <i class="material-icons small green-text icon-sep">favorite</i>
                     <i class="material-icons small green-text icon-sep">favorite</i>
                     <h4>قَالَ رَسُولُ اللَّهِ ﷺ‏: 'لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ وَالنَّاسِ أَجْمَعِينَ'<small class="noshow">ا</small></h4>
-                    <h6 class="">The Messenger of God [May God bless and protect him] said: "None of you will truly believe, until you love me more than your own parents, children, and all of humanity."</h6>
+                    <h6 class="">The Messenger of God [May God bless and protect him] said: "None of you will truly believe, until you love me more than your own parents, children, and all of humanity." <small>[Narrated by Anas and Abū Hurayrah [rḍ] in Bukhārī and Muslim.]</small></h6>
                 </div>
             </div>
             <div class="card">
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class="active" href="#honesty">But in all honesty</a></li>
-                        <li class="tab"><a href="#myhope">My Hope My Desire</a></li>
+                        <li class="tab"><a class="active" href="#honesty" onclick="ga('send', 'event', 'Honesty', 'Click', 'Site');">But in all honesty</a></li>
+                        <li class="tab"><a href="#myhope" onclick="ga('send', 'event', 'MyHope', 'Click', 'Site');">My Hope My Desire</a></li>
                     </ul>
                 </div>
                 <div class="card-content green lighten-3 center grey-text text-darken-3">
@@ -373,7 +546,7 @@
                         <br/> What can be worse than not being able to drink from your blessed hands at your blessed Ḥawḍ?
                         <br/> I live just to die just to be with you
                         <br/> Until we meet at the Ḥawḍ, my Beloved ﷺ
-                        <div class="right-align">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
+                        <div class="right-align hide">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
                     </div>
                     <div id="myhope">
                         [...]
@@ -391,7 +564,7 @@
                         <br/> Unending days— when will I meet you?
                         <br/> My lips repeat the words you uttered,
                         <br/> Hoping to be graced by your feet—one day. [...]
-                        <div class="right-align">— <em>Khādim Al-Ḥabīb</em></div>
+                        <div class="right-align hide">— <em>Khādim Al-Ḥabīb</em></div>
                     </div>
                 </div>
             </div>
@@ -406,7 +579,7 @@
                         <br/> I live just to die just to be with you
                         <br/> Until we meet at the Ḥawḍ, my Beloved ﷺ
                     </div>
-                    <div class="right-align">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
+                    <div class="right-align hide">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
                     <h6></h6>
                     <i class="material-icons small green-text icon-sep">favorite</i>
                     <i class="material-icons small green-text icon-sep">favorite</i>
@@ -428,7 +601,7 @@
                         <br/> My lips repeat the words you uttered,
                         <br/> Hoping to be graced by your feet—one day. [...]
                     </div>
-                    <div class="right-align">— <em>Khādim Al-Ḥabīb</em></div>
+                    <div class="right-align hide">— <em>Khādim Al-Ḥabīb</em></div>
                 </div>
             </div>
         </div>
