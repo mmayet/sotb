@@ -1,5 +1,7 @@
+var toasts;
+var delayMillis;
 $(document).ready(function() {
-    $('.slider').slider({indicators: false, interval: 2000});
+    $('.slider').slider({ indicators: false, interval: 2000 });
     firetoasts();
 });
 
@@ -13,22 +15,21 @@ thetale.addEventListener('play', function(e) {
 });
 
 firetoasts = function() {
-	delayMillis = 1000;
-	var toasts = [
-		/*0*/"Salām, O Servant of The Beloved ﷺ!",
-		/*1*/"I’m here to help and give updates.",
-		/*2*/"Add me to your phone's homescreen.",
-		/*3*/"💚",
-		/*4*/"",
-		/*5*/"",
-		/*6*/"",
-		/*7*/""];
-	Materialize.toast(toasts[0], 4000, 'rounded');
-	setTimeout(function() {Materialize.toast(toasts[1], 4000, 'rounded');}, delayMillis);
-	setTimeout(function() {Materialize.toast(toasts[2], 4000, 'rounded');}, delayMillis*2);
-	setTimeout(function() {Materialize.toast(toasts[3], 4000, 'rounded');}, delayMillis*3);
-	/*setTimeout(function() {Materialize.toast(toasts[4], 4000, 'rounded');}, delayMillis*4);*/
-	/*setTimeout(function() {Materialize.toast(toasts[5], 4000, 'rounded');}, delayMillis*5);*/
-	/*setTimeout(function() {Materialize.toast(toasts[6], 4000, 'rounded');}, delayMillis*6);*/
-	/*setTimeout(function() {Materialize.toast(toasts[7], 4000, 'rounded');}, delayMillis*7);*/
+    toasts = [
+        /*0*/"Salām, O Servant of The Beloved ﷺ!",
+        /*1*/"I’m here to help and give updates.",
+        /*2*/"Add me to your phone's homescreen.",
+        /*3*/"💚",
+        /*4*/""];
+
+    for (var x = 0; x < 4; x++) {
+        displaytoasts(x);
+    }
+}
+
+displaytoasts = function(toastCounter) {
+	delayMillis = 1500;
+    setTimeout(function() {
+        Materialize.toast(toasts[toastCounter], 5500, 'rounded');
+    }, delayMillis * (toastCounter + 1));
 }
