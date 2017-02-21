@@ -4826,7 +4826,7 @@ small {
 }
 
 .tabs .tab a .active {
-  color: #4caf50;
+  color: #4caf50!important;
 }
 
 .tabs .tab a {

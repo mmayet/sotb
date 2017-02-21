@@ -146,30 +146,30 @@
                         <div class="right-align hide">— <em>Khādimah Ḥabīb al-Samāʾ wa al-Arḍ</em></div>
                     </div>
                     <div id="gather">
-                        Our love for you is why we gather,<br/>
-                        Ḥabīb Allāh, our hearts you shatter.<br/>
-                        Blessings on you is all we speak of,<br/>
-                        Looking at you is all we dream of.<br/><br/>
-
-                        Your love and praise our hearts do hover,<br/>
-                        To be for you, a one true lover.<br/>
-                        Our lives for you, we have given up,<br/>
-                        Hoping and dreaming, our eyes stuck shut.<br/><br/>
-
-                        We love you, we love you— Yā Rasūl,<br/>
-                        O please, we beg, for drink at your pool.<br/>
-                        Quenched forever, not by drink inside,<br/>
-                        But your hands we taste, in them we cried.<br/><br/>
-
-                        Your perfect looks, is all that we read,<br/>
-                        Your way, your life is all that we need.<br/>
-                        Angels of God come down when we say,<br/>
-                        Our Lord, <em>Ṣalli wa sallim ʿalayh</em>.<br/><br/>
-
-                        Mercy is all that is spread around,<br/>
-                        Angels of God, from heavens to ground.<br/>
-                        Breezes of love, we do find from you,<br/>
-                        Kisses from you; our dreams, please, come true.
+                        Our love for you is why we gather,
+                        <br/> Ḥabīb Allāh, our hearts you shatter.
+                        <br/> Blessings on you is all we speak of,
+                        <br/> Looking at you is all we dream of.
+                        <br/>
+                        <br/> Your love and praise our hearts do hover,
+                        <br/> To be for you, a one true lover.
+                        <br/> Our lives for you, we have given up,
+                        <br/> Hoping and dreaming, our eyes stuck shut.
+                        <br/>
+                        <br/> We love you, we love you— Yā Rasūl,
+                        <br/> O please, we beg, for drink at your pool.
+                        <br/> Quenched forever, not by drink inside,
+                        <br/> But your hands we taste, in them we cried.
+                        <br/>
+                        <br/> Your perfect looks, is all that we read,
+                        <br/> Your way, your life is all that we need.
+                        <br/> Angels of God come down when we say,
+                        <br/> Our Lord, <em>Ṣalli wa sallim ʿalayh</em>.
+                        <br/>
+                        <br/> Mercy is all that is spread around,
+                        <br/> Angels of God, from heavens to ground.
+                        <br/> Breezes of love, we do find from you,
+                        <br/> Kisses from you; our dreams, please, come true.
                         <div class="right-align hide">— <em>Khādim Al-Ḥabīb</em></div>
                     </div>
                     <!-- <div class="hide" id="serving">
@@ -209,6 +209,7 @@
             <div class="card">
                 <div class="card-content center">
                     <span class="card-title green-text"><strong>The Heavenly Invite</strong></span>
+                    <h6 id="event-countdown"></h6>
                 </div>
             </div>
             <div class="card-panel">
@@ -685,6 +686,12 @@
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="js/materialize.js" type="text/javascript"></script>
     <script src="js/myscripts.js" type="text/javascript"></script>
+    <script src="js/jquery.countdown.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#event-countdown').countdown('2017/04/15 16:00:00', function(event) {
+            $(this).html(event.strftime('%-D Day%!D, %-H Hour%!H, %-M Minute%!M, and %-S Second%!S'));
+        });
+    </script> 
 </body>
 
 </html>
