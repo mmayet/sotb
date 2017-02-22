@@ -18,7 +18,7 @@ var filesToCache = [
   '/',
   '/index.html',
   '/test.html',
-  'favicon.ico',
+  '/favicon.ico',
   '/js/jquery-3.1.1.min.js',
   '/js/materialize.js',
   '/js/myscripts.js',
@@ -30,7 +30,8 @@ var filesToCache = [
   '/media/images/b3.jpg',
   '/media/images/kh.png',
   '/media/audio/specialMiraj.mp3',
-  '/media/audio/The Heavenly Invite.mp3'
+  '/media/audio/The Heavenly Invite.mp3',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', function(e) {
