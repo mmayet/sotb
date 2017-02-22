@@ -26,16 +26,16 @@ firetoasts = function() {
         /*0*/
         "Salām, O Servant of The Beloved ﷺ!",
         /*1*/
-        "I’m getting some under-the-hood updates. So don't be worried if I'm broken for a few days. Sowe :<",
-        /*2*/
         "💚",
+        /*2*/
+        "I’m getting some under-the-hood updates. So don't be worried if I'm broken for a few days. Sowe :<",        
         /*3*/
-        "Add me to your phone's homescreen.",
+        "Go to <a href='https://servantsofthebeloved.com'> https://servantsofthebeloved.com</a>. And guess what, you'll be able to visit the website offline!",
         /*4*/
         ""
     ];
 
-    for (var x = 0; x < 3; x++) {
+    for (var x = 0; x < 2; x++) {
         displaytoasts(x);
     }
 }
