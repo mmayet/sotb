@@ -1,0 +1,202 @@
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+    color: #444;
+}
+
+p {
+    line-height: 2rem;
+}
+
+.button-collapse {
+    color: #26a69a;
+}
+
+.parallax-container {
+    min-height: 380px;
+    /*line-height: 0;*/
+    height: auto;
+    color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+.parallax img {
+    display: inline!important;
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    #index-banner .section {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+footer.page-footer {
+    margin: 0;
+}
+
+/*.header {
+    text-shadow: 3px 3px black;
+    background-color: rgba(242, 242, 242, .5);
+    box-shadow: 0 0 3px 10px rgba(242, 242, 242, .3);
+}*/
+
+.links a {
+    text-decoration: none!important;
+}
+
+.standout {
+    font-weight: bold;
+    color: green;
+}
+
+.centerblock {
+    text-align: center;
+}
+
+.poemsection {
+    /*display: none!important;*/
+}
+
+.mytitle {
+    letter-spacing: 2px;
+}
+
+div {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h6 {
+    line-height: inherit;
+}
+
+.left-poem {
+    text-align: left;
+}
+
+@font-face {
+    font-family: 'quran';
+    src: url("../fonts/quran.ttf") format("truetype");
+}
+
+.quran {
+    font-family: 'quran';
+    line-height: 190%;
+}
+
+.noshow {
+    color: white;
+}
+
+.miniletter {
+    font-size: 40%;
+}
+
+.normalfont {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-icon-gap {
+    padding-bottom: 20px;
+}
+
+.slim-card {
+    padding: 0px;
+}
+
+.icon-sep {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .show-on-xl-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .hide-on-xl-only {
+    display: none !important;
+  }
+}
+
+.tab-card-title {
+    padding-top: 15px;
+}
+
+@media only screen and (max-width: 400px) {
+  .audiopoem {
+    width: 250px;
+  }
+}
+
+.arabic-text {
+    line-height: 135%;
+}
+
+.collapsible-header.active {
+    font-weight: bold;
+}
+
+.arabic-h {
+    font-size: 1.75rem!important;
+    line-height: 130%!important
+}
+
+.page-info {
+    line-height: 150%;
+    letter-spacing: .55px;
+}
+
+.arabic-medium {
+    font-size: 1.58rem!important;
+    line-height: 130%!important
+}
+
+.small-font {
+    font-size: 1.08rem;
+}
+
+#event-countdown {
+    font-size: 1.28rem!important;
+}
+
+#schedule {
+    font-size: 15.5px;
+}
