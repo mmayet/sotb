@@ -11,11 +11,18 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
+/*
+cd C:\Users\IBM_ADMIN\Documents\GitHub\sotb-dir\sotb
+aws s3 sync . s3://aws-website-servantsofthebeloved-zt77r
+
+aws s3 sync s3://aws-website-servantsofthebeloved-zt77r .
+*/
+//
 
 var dataCacheName = 'ServantsofTheBeloved';
-var cacheName = 'ServantsofTheBeloved-3.2-615am';
+var cacheName = 'SoTB-3.6-150pm';
 var filesToCache = [
-    '/',
     '/index.html',
     '/test.html',
     '/favicon.ico',
@@ -24,27 +31,15 @@ var filesToCache = [
     '/js/myscripts.js',
     '/css/materialize.css',
     '/css/style.css',
-    /*'/media/images/b1.jpg',*/
     '/media/images/b2.jpg',
     '/media/images/b3.jpg',
     '/media/images/kh.png',
-    /*'/media/audio/specialMiraj.mp3',
-    '/media/audio/The Heavenly Invite.mp3',*/
     '/manifest.json',
-    'fonts/quran.ttf'
+    '/fonts/quran.ttf'
 ];
 
-self.addEventListener('install', function(e) {
-    console.log('[ServiceWorker] Install');
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            console.log('[ServiceWorker] Caching app shell');
-            return cache.addAll(filesToCache);
-        })
-    );
-});
-
 self.addEventListener('fetch', function(e) {
+    console.log(cacheName);
     console.log('[Service Worker] Fetch', e.request.url);
     var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
     if (e.request.url.indexOf(dataUrl) > -1) {
@@ -75,6 +70,18 @@ self.addEventListener('fetch', function(e) {
             })
         );
     }
+});
+
+self.addEventListener('install', function(e) {
+    console.log('[Service Worker] Install');
+    e.waitUntil(
+        caches.open(dataCacheName).then(function(cache) {
+            console.log('[Service Worker] Caching app shell');
+            return cache.addAll(filesToCache);
+        }).then(function(e) {
+            return self.skipWaiting();
+        })
+    );
 });
 
 self.addEventListener('activate', function(e) {

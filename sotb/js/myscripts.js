@@ -1,6 +1,15 @@
 var toasts;
 var delayMillis = 1500;
+var cacheVer = '3.6-150pm';
 $(document).ready(function() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
+    }
+
+    console.log(cacheVer);
+
     countdownTimer();
     $('ul.tabs').tabs();
     $('ul.tabs').tabs('select_tab', 'home');
@@ -9,11 +18,10 @@ $(document).ready(function() {
 
     firetoasts();
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./service-worker.js')
-            .then(function() { console.log('Service Worker Registered'); });
-    }
+    /*$('.modal').modal();
+    $('#modal1').modal('open');*/
+
+    ga('send', 'event', cacheVer, 'Version', 'SW');
 });
 
 var thousandPoemAudio = document.getElementById('thousandlines');
@@ -30,13 +38,14 @@ firetoasts = function() {
         /*0*/
         "Salām, O Servant of The Beloved ﷺ!",
         /*1*/
-        "Ctrl + F5 to get the latest updates.",
+        "Refresh issues have been fixed.",
         /*2*/
-        "Add me to your phone's homescreen.",
+        "You will always get the latest version.",
         /*3*/
-        "💚",
+        "💚 ﷺ 💚",
         /*4*/
-        ""
+        "Schedule V. 5 has been re-re-updated.",
+        "Add me to your phone's homescreen."
     ];
 
     for (var x = 0; x < 4; x++) {
@@ -59,20 +68,20 @@ tabSelector = function(page) {
             $('ul.tabs').tabs('select_tab', 'youreloved');
             $('ul.tabs').tabs('select_tab', 'thousandlines');
         } else if (page == 'schedule') {
-            $('ul.tabs').tabs('select_tab', 'verOne');
+            $('ul.tabs').tabs('select_tab', 'verTwo');
         }
     }, 5);
 
     if (page == 'schedule') {
         setTimeout(function() {
-            $('ul.tabs').tabs('select_tab', 'verOne');
+            $('ul.tabs').tabs('select_tab', 'verTwo');
         }, 15);
     }
 }
 
 countdownTimer = function() {
     // Set the date we're counting down to
-    var countDownDate = new Date("April 15, 2017 16:00:00").getTime();
+    var countDownDate = new Date("April 29, 2017 16:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
