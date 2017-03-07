@@ -1,6 +1,6 @@
 var toasts;
 var delayMillis = 1500;
-var cacheVer = '3.6-150pm';
+var cacheVer = '3.7-100pm';
 $(document).ready(function() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
@@ -38,17 +38,17 @@ firetoasts = function() {
         /*0*/
         "Salām, O Servant of The Beloved ﷺ!",
         /*1*/
-        "Refresh issues have been fixed.",
-        /*2*/
-        "You will always get the latest version.",
-        /*3*/
         "💚 ﷺ 💚",
+        /*2*/
+        "Refresh issues have been fixed.",
+        /*3*/
+        "You will always get the latest version.",
         /*4*/
         "Schedule V. 5 has been re-re-updated.",
         "Add me to your phone's homescreen."
     ];
 
-    for (var x = 0; x < 4; x++) {
+    for (var x = 0; x < 2; x++) {
         displaytoasts(x);
     }
 }
