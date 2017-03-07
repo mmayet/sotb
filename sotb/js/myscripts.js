@@ -1,6 +1,7 @@
 var toasts;
 var delayMillis = 1500;
-var cacheVer = '3.7-100pm';
+var cacheVer = '3.7-252pm';
+var googleFormLoaded = false;
 $(document).ready(function() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
@@ -21,7 +22,9 @@ $(document).ready(function() {
     /*$('.modal').modal();
     $('#modal1').modal('open');*/
 
-    ga('send', 'event', cacheVer, 'Version', 'SW');
+    if (!window.location.pathname.includes("test")) {
+        ga('send', 'event', cacheVer, 'Version', 'SW');
+    }
 });
 
 var thousandPoemAudio = document.getElementById('thousandlines');
@@ -110,6 +113,13 @@ countdownTimer = function() {
 }
 
 loadGoogleForm = function() {
-    $('#rsvp').append("<div class='centerblock'> <iframe class='center-align hide-on-med-and-up' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='250' height='1300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> <iframe class='center-align show-on-medium hide-on-small-and-down' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='600' height='1020' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> </div>");
-    window.onbeforeunload = null;
+    if (!googleFormLoaded) {
+        $('#rsvp').append("<div class='centerblock'> <iframe class='center-align hide-on-med-and-up' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='250' height='1300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> <iframe class='center-align show-on-medium hide-on-small-and-down' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='600' height='1020' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> </div>");
+        window.onbeforeunload = null;
+    }
+    googleFormLoaded = true;
+}
+
+goRSVP = function() {
+    $('ul.tabs').tabs('select_tab', 'rsvp');
 }
