@@ -1,6 +1,6 @@
 var toasts;
 var delayMillis = 1500;
-var cacheVer = '3.7-252pm';
+var cacheVer = '3.7-300pm';
 var googleFormLoaded = false;
 $(document).ready(function() {
     if ('serviceWorker' in navigator) {
