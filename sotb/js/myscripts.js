@@ -1,31 +1,7 @@
 var toasts;
 var delayMillis = 1500;
-var cacheVer = '3.8-630am';
+var cacheVer = '3.8-1230pm';
 var googleFormLoaded = false;
-$(document).ready(function() {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./service-worker.js')
-            .then(function() { console.log('Service Worker Registered'); });
-    }
-
-    console.log(cacheVer);
-
-    countdownTimer();
-    $('ul.tabs').tabs();
-    $('ul.tabs').tabs('select_tab', 'home');
-    $('.slider').slider({ indicators: false, interval: 2000 });
-    /*$('#home').tabs({onShow: tabSelector('home')});*/
-
-    firetoasts();
-
-    /*$('.modal').modal();
-    $('#modal1').modal('open');*/
-
-    if (!window.location.pathname.includes("test")) {
-        ga('send', 'event', cacheVer, 'Version', 'SW');
-    }
-});
 
 var thousandPoemAudio = document.getElementById('thousandlines');
 thousandPoemAudio.addEventListener('play', function(e) {
@@ -35,6 +11,23 @@ var thetale = document.getElementById('thetale');
 thetale.addEventListener('play', function(e) {
     ga('send', 'event', 'TheTale(Audio)', 'Listen', 'Audio');
 });
+
+$(document).ready(function() {
+    allSWFunctions();
+    countdownTimer();
+    initializeTabs();
+    firetoasts();
+});
+
+initializeTabs = function() {
+    $('ul.tabs').tabs();
+    $('ul.tabs').tabs('select_tab', 'home');
+    $('.slider').slider({ indicators: false, interval: 2000 });
+    /*$('#home').tabs({onShow: tabSelector('home')});*/
+
+    /*$('.modal').modal();
+    $('#modal1').modal('open');*/
+}
 
 firetoasts = function() {
     toasts = [
@@ -114,7 +107,7 @@ countdownTimer = function() {
 
 loadGoogleForm = function() {
     if (!googleFormLoaded) {
-        $('#rsvp').append("<div class='centerblock'> <iframe class='center-align hide-on-med-and-up' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='250' height='1300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> <iframe class='center-align show-on-medium hide-on-small-and-down' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='600' height='1020' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> </div>");
+        $('#rsvp').append("<div class='centerblock'> <iframe class='center-align hide-on-med-and-up' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='250' height='1900' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> <iframe class='center-align show-on-medium hide-on-small-and-down' src='https://docs.google.com/forms/d/e/1FAIpQLScBxU2IAe4vW516IPuHKelUqSMRWOyAnexdQfluyLsBASUetA/viewform?embedded=true' width='600' height='1400' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe> </div>");
         window.onbeforeunload = null;
     }
     googleFormLoaded = true;
@@ -122,4 +115,26 @@ loadGoogleForm = function() {
 
 goRSVP = function() {
     $('ul.tabs').tabs('select_tab', 'rsvp');
+}
+
+allSWFunctions = function() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
+    }
+
+    console.log(cacheVer);
+
+    if (window.localStorage) {
+        if (!localStorage.getItem('firstLoad')) {
+            localStorage['firstLoad'] = true;
+            window.location.reload(true);
+        } else
+            localStorage.removeItem('firstLoad');
+    }
+
+    if (!window.location.pathname.includes("test")) {
+        ga('send', 'event', cacheVer, 'Version', 'SW');
+    }
 }
