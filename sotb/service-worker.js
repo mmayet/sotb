@@ -21,7 +21,7 @@ aws s3 sync s3://aws-website-servantsofthebeloved-zt77r .
 //
 
 var dataCacheName = 'ServantsofTheBeloved';
-var cacheName = 'SoTB-3.7-600pm';
+var cacheName = 'SoTB-3.8-630am';
 var filesToCache = [
     '/index.html',
     '/test.html',
